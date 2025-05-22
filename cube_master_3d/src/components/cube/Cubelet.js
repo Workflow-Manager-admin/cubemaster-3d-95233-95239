@@ -1,5 +1,5 @@
-import React from 'react';
-import { BoxGeometry } from 'three';
+import React, { useRef } from 'react';
+import { BoxGeometry, MathUtils } from 'three';
 import { useFrame } from '@react-three/fiber';
 
 // Define the standard Rubik's cube colors
