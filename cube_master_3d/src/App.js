@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import CubeMasterContainer from './components/CubeMasterContainer';
 
 function App() {
   return (
@@ -8,9 +9,11 @@ function App() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <div className="logo">
-              <span className="logo-symbol">*</span> KAVIA AI
+              <span className="logo-symbol">*</span> CubeMaster 3D
             </div>
-            <button className="btn">Template Button</button>
+            <div className="nav-links">
+              <a href="#" className="btn">Help</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -18,16 +21,17 @@ function App() {
       <main>
         <div className="container">
           <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
+            <div className="subtitle">Interactive 3D Puzzle</div>
             
-            <h1 className="title">cube_master_3d</h1>
+            <h1 className="title">Rubik's Cube Simulator</h1>
             
             <div className="description">
-              Start building your application.
+              Rotate, scramble, and solve the classic 3x3 Rubik's Cube in this interactive simulator.
+              Use the controls below or drag directly on the cube to manipulate it.
             </div>
-            
-            <button className="btn btn-large">Button</button>
           </div>
+          
+          <CubeMasterContainer />
         </div>
       </main>
     </div>
