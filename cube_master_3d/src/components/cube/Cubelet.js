@@ -30,21 +30,23 @@ const Cubelet = ({ position, colors }) => {
     if (meshRef.current && meshRef.current.userData.targetRotation) {
       // Implement smooth transitions for cube rotations
       const target = meshRef.current.userData.targetRotation;
-      meshRef.current.rotation.x = THREE.MathUtils.lerp(
-        meshRef.current.rotation.x,
-        target.x,
-        0.1
-      );
-      meshRef.current.rotation.y = THREE.MathUtils.lerp(
-        meshRef.current.rotation.y,
-        target.y,
-        0.1
-      );
-      meshRef.current.rotation.z = THREE.MathUtils.lerp(
-        meshRef.current.rotation.z,
-        target.z,
-        0.1
-      );
+      if (target) {
+        meshRef.current.rotation.x = MathUtils.lerp(
+          meshRef.current.rotation.x,
+          target.x,
+          0.1
+        );
+        meshRef.current.rotation.y = MathUtils.lerp(
+          meshRef.current.rotation.y,
+          target.y,
+          0.1
+        );
+        meshRef.current.rotation.z = MathUtils.lerp(
+          meshRef.current.rotation.z,
+          target.z,
+          0.1
+        );
+      }
     }
   });
 
